@@ -1,11 +1,15 @@
+/*
+ * @Author: zhengxiaoxiao
+ * @Date: 2020-12-14 15:16:21
+ * @Description: 入口文件
+ */
+// 加载react库
 import React from 'react';
 import ReactDOM from 'react-dom';
-// App组件，大写字母开头
-import App from './App';
-import './index.css';//边距，样式
+// App组件： 大写字母开头的都是组件
+import Todolist from './TodoList';
+
 
 ReactDOM.render(
-  // jsx语法
-  <App />,
-  document.getElementById('root')
+  <Todolist />, document.getElementById('root')
 );
