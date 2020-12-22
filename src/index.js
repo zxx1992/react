@@ -7,9 +7,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // App组件： 大写字母开头的都是组件
-import Todolist from './TodoList';
+import Home from'./home'
+
+import './css/game.css'
+import './css/home.css'
 
 
 ReactDOM.render(
-  <Todolist />, document.getElementById('root')
+  <Home />, document.getElementById('root')
 );
