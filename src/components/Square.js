@@ -14,7 +14,7 @@
 // }
 
 
-// 如果组件只包含一个render方法，并且不包含state,可以使用函数组件
+// 如果组件只包含一个render方法，并且不包含state,可以使用函数组件（静态组件）
 function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
