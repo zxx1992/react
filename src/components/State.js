@@ -31,6 +31,9 @@ class State extends React.Component {
   componentDidMount() {
     this.onSetInterval();
   }
+  componentWillMount() {
+    this.onSetInterval() = null;
+  }
 }
 
 export default State;

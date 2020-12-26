@@ -13,7 +13,10 @@ import ReactDOM from 'react-dom';
 // import State from './components/State'
 // import Tab from './components/Tab'
 // import Parent from './components/Props2'
-import XuanHoeme from './components/Xuanran'
+// import XuanHoeme from './components/Xuanran'
+
+// import List from './components/List'
+import ComTwo from './components/Shengming'
 
 import './css/game.css'
 import './css/home.css'
@@ -28,4 +31,4 @@ let root = document.getElementById('root');
 // run()
 // setInterval(run, 1000);
 
-ReactDOM.render(<XuanHoeme></XuanHoeme>, root);
+ReactDOM.render(<ComTwo></ComTwo>, root);
