@@ -51,15 +51,13 @@ class List extends React.Component {
   }
   render() {
     // map 生成新的数组
-    let items = this.state.list.map((item, index) => {
-      return (
-        <Item item={item} key={index} index={item.index} onClick={(index) => this.onAlert(index)}></Item>
-      )
-    })
     return (
       <div>
         <ul>
-          {items}
+          {/* 这里可以直接内联map返回的新数组 */}
+          {this.state.list.map((item, index) =>
+            <Item item={item} key={index} index={item.index} onClick={(index) => this.onAlert(index)}></Item>
+          )}
         </ul>
       </div>
     )

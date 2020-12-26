@@ -16,23 +16,21 @@ class State extends React.Component {
     )
   }
   // 函数
-  onSetInterval() {
-    setInterval(() => {
-      console.log(this.state.time, "this.state.time1")
-      // 修改数据 ：  setStatus
-      this.setState({
-        time: new Date().toLocaleTimeString()
-      })
-      console.log(this.state.time, "this.state.time2")
-    }, 1000)
+  tick() {
+    this.setState({
+      time: new Date().toLocaleTimeString()
+    })
   }
 
   // 生命周期函数
   componentDidMount() {
-    this.onSetInterval();
+    this.onSetInterval = setInterval(() =>
+      this.tick(), 1000
+    );
   }
+  // 卸载，销毁
   componentWillMount() {
-    this.onSetInterval() = null;
+    clearInterval(this.onSetInterval());
   }
 }
 

@@ -6,9 +6,9 @@
 
 import React from 'react'
 class Com extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 
   // render  为一个纯函数
   render() {
