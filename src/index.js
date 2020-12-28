@@ -19,7 +19,10 @@ import ReactDOM from 'react-dom';
 // import List from './components/List'
 // import List2 from './components/List2'
 // import ComTwo from './components/Shengming'
-import NameForm from './components/Form'
+// import NameForm from './components/Form'
+// import Calculator from './components/Calculator'
+// import WelcomeDialog from './components/Zuhe'
+import Whole from './example/Whole'
 
 import './css/game.css'
 import './css/home.css'
@@ -34,4 +37,4 @@ let root = document.getElementById('root');
 // run()
 // setInterval(run, 1000);
 
-ReactDOM.render(<NameForm></NameForm>, root);
+ReactDOM.render(<Whole></Whole>, root);
