@@ -22,7 +22,11 @@ import ReactDOM from 'react-dom';
 // import NameForm from './components/Form'
 // import Calculator from './components/Calculator'
 // import WelcomeDialog from './components/Zuhe'
-import Whole from './example/Whole'
+// import Whole from './example/Whole'
+// import Example from './hook/StateHook'
+// import FrientSratus from './hook/EffectHook'
+import Hook from './hook/Hook'
+
 
 import './css/game.css'
 import './css/home.css'
@@ -37,4 +41,4 @@ let root = document.getElementById('root');
 // run()
 // setInterval(run, 1000);
 
-ReactDOM.render(<Whole></Whole>, root);
+ReactDOM.render(<Hook></Hook>, root);
