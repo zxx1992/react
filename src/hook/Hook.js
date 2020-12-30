@@ -1,6 +1,8 @@
 import Example from "./StateHook";
 import FrientSratus from "./EffectHook";
 import App from "./ContextHook";
+import CallbackHook from "./CallbackHook";
+import Counter from "./ReducerHook";
 
 function Hook() {
   return (
@@ -8,6 +10,8 @@ function Hook() {
       <Example></Example>
       <FrientSratus></FrientSratus>
       <App></App>
+      <CallbackHook></CallbackHook>
+      <Counter></Counter>
     </div>
   )
 }
