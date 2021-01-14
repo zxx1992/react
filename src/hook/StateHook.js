@@ -2,6 +2,17 @@ import React, { useState, useEffect } from 'react'
 
 import useCount from "./UseHook"
 
+// 将逻辑相同的提出来，只定义一个state
+function useCountHook(initialValue) {
+  const [str, setCount] = useState(initialValue);
+  return [
+    str,
+    () => {
+      setCount(str + "initialCount")
+    }
+  ]
+}
+
 function Example() {
   // const [count, setCount] = useState(0);
   // 通过跳过 Effect 进行性能优化,添加第二个参数，只有在第二个参数发生变化的时候才触发
@@ -13,7 +24,8 @@ function Example() {
   const count = useCount();
   console.log(count,"count1111")
 
-  const [str, setStr] = useState("zxx");
+  const [str, setStr1] = useCountHook("zxx");
+  const [str2, setStr2] = useCountHook("zxxsehngjiban");
   // useEffect :告诉 React 组件需要在渲染后执行某些操作
   useEffect(() => {
     console.log(str, "str")
@@ -23,8 +35,12 @@ function Example() {
     <div>
       <p>{count}</p>
       <p>{str}</p>
-      <button onClick={() => setStr(str.toUpperCase())}>
+      <p>{str2}</p>
+      <button onClick={() => setStr1(str.toUpperCase())}>
         click me
+      </button>
+      <button onClick={() => setStr2(str.toUpperCase())}>
+        click me again
       </button>
     </div>
   )
