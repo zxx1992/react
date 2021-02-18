@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react'
+import React, { memo, useCallback, useState, useEffect } from 'react'
 
 // const CallbackHook = memo(() => {
 //   const [currentVal, setCurrentVal] = useState("");
@@ -73,7 +73,7 @@ import React, { memo, useCallback, useState } from 'react'
 // 这里子组件渲染了一个项目列表，列表很大，有几百个项目，这市就可以考虑使用memo封装，
 const MyBigList = memo((props) => {
   const { items, handleClick } = props;
-  console.log(handleClick,"222")
+  console.log(handleClick, "222")
   const lists = items.map((item, index) => {
     return (<li key={index} onClick={() => handleClick()}>{item.name}</li>)
   })
@@ -84,13 +84,18 @@ const MyBigList = memo((props) => {
 // 这里说只要term不变，useCallback就会返回相同的函数对象
 // handleClick只和term有关(还是不太懂，是否用useCallback包裹，好像都一样)
 function CallbackHook() {
-  const [term, setTerm] = useState("term")
+  const [term, setTerm] = useState("term1233333")
   const handleClick = useCallback((item) => {
-    console.log('you click', item)
+    setTerm(() => { return "zxxxxxx" })
+    console.log('you click', term)
   }, [term]);
   // const handleClick = (item) => {
   //   console.log('you click', item)
   // };
+  useEffect(() => {
+    console.log('888888', term)
+  }, [term])
+
   const items = [{
     name: "1"
   }, {
@@ -115,8 +120,8 @@ function CallbackHook() {
   return (
     <div>
       {term}
-      <button onClick={() => setTerm("term123")}>changeTerm</button>
-      <MyBigList items={items} handleClick={handleClick}></MyBigList>
+      <button onClick={() => handleClick()}>changeTerm</button>
+      {/* <MyBigList items={items} handleClick={handleClick}></MyBigList> */}
     </div>
   )
 }

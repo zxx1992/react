@@ -5,6 +5,7 @@ import React, { useRef, useState } from 'react'
 export default function UseRefExample() {
   const [counter, setCounter] = useState(0);
   const prev = useRef(null);
+  console.log(prev,"prev")
   return (
     <div>
       <p>{counter}</p>

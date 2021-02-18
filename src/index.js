@@ -26,6 +26,7 @@ import ReactDOM from 'react-dom';
 // import Example from './hook/StateHook'
 // import FrientSratus from './hook/EffectHook'
 import Hook from './hook/Hook'
+// import Weather from './pages/Example'
 
 
 import './css/game.css'
@@ -42,3 +43,4 @@ let root = document.getElementById('root');
 // setInterval(run, 1000);
 
 ReactDOM.render(<Hook></Hook>, root);
+// ReactDOM.render(<Weather></Weather>, root);
